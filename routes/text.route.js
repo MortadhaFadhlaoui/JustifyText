@@ -109,10 +109,7 @@ function justifyText(lastTextLength,user,currentDate,req,res){
 
             // justify all paragraph and return the text justified
             justifyText = groupParagraph(paragraphs);
-            res.status(200).json({
-                success: true,
-                message: justifyText,
-            });
+            res.status(200).send(justifyText);
         })
             .catch(err => {
                 res.status(400).json({
